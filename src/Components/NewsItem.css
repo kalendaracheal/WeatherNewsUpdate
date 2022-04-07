@@ -1,0 +1,19 @@
+.news-app {
+    display: flex;
+    justify-content: center;
+}
+
+.news-item {
+    width: 90%;
+    padding: 20px;
+    /* border: 2px solid grey; */
+    margin-bottom: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.news-img {
+    width: 600px;
+    padding-left: 150px;
+    justify-content: center;
+    border-radius: 5px;
+}
