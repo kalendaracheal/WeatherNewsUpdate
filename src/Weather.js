@@ -14,12 +14,8 @@ import pic9 from "./assets/pic9.jpg";
 import pic10 from "./assets/pic10.jpg";
 
 import { Carousel, CarouselItem } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-const api = {
-  key: "6f7d7d0b60f555edfd26071a742e2859",
-  base: "https://home.openweathermap.org/api_keys"
-}
-
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function App() {
   
@@ -28,8 +24,6 @@ function App() {
   let hours = timenow.getHours();
   const [data, setData] = useState({})
   const [query, setQuery] = useState('')
-
-  
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=895284fb2d2c50a520ea537456963d9c`
 
@@ -61,20 +55,24 @@ function App() {
       <main>
         <div className='start'>
         <div className='start-text'><h1>Weather</h1> </div>
-        <img src={pic} width={80} height={80} className='pic' />
-        
-        {/* <img src='./assets/weather-logo.png'/> */}
+        <img src={pic} width={70} height={70} className='pic-w' />
+      
         <div className="search-box">
           <input 
             type="text"
             className="search-bar"
-            placeholder="Enter a location ..."
+            placeholder="Enter any location ..."
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
           />
-          <div>Time:{hours}:{minutes}</div>
+                 <div className='displayw'>
+                    <div className='w-btn'><Link to="/Newsdisplay"><button className='btn-w'> News Updates</button></Link></div> 
+                    <div><h5>Time:{hours}:{minutes}</h5></div>
+                </div>          
         </div>
+        
+
 
         
         </div>
@@ -134,6 +132,7 @@ function App() {
 
         </div>
               </main>
+              <Footer/>
     </div>
   );
 }
