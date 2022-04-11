@@ -14,8 +14,8 @@ import pic9 from "./assets/pic9.jpg";
 import pic10 from "./assets/pic10.jpg";
 
 import { Carousel, CarouselItem } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import NavBar from './Navbar';
 
 function App() {
   
@@ -52,10 +52,11 @@ function App() {
 
   return (
     <div className={(typeof data.main != "undefined") ? ((data.main.temp > 19) ? 'app warm' : 'app') : 'app'}>
+      <NavBar/>
       <main>
         <div className='start'>
         <div className='start-text'><h1>Weather</h1> </div>
-        <img src={pic} width={70} height={70} className='pic-w' />
+        <img src={pic} alt={pic}width={70} height={70} className='pic-w' />
       
         <div className="search-box">
           <input 
@@ -66,12 +67,11 @@ function App() {
             value={query}
             onKeyPress={search}
           />
-                 <div className='displayw'>
-                    <div className='w-btn'><Link to="/Newsdisplay"><button className='btn-w'> News Updates</button></Link></div> 
-                    <div><h5>Time:{hours}:{minutes}</h5></div>
-                </div>          
+                        
         </div>
-        
+        <div >
+                    <div className='displayw'><h5>Time:{hours}:{minutes}</h5></div>
+                </div>  
 
 
         
@@ -82,34 +82,34 @@ function App() {
           <Carousel>
            
             <CarouselItem>
-              <img src={pic1} width={300} height={300} className='pic' />
+              <img src={pic1} alt={pic1} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic2} width={300} height={300} className='pic' />
+              <img src={pic2} alt={pic2} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic3} width={300} height={300} className='pic' />
+              <img src={pic3} alt={pic3} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic4} width={300} height={300} className='pic' />
+              <img src={pic4} alt={pic4} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic5} width={300} height={300} className='pic' />
+              <img src={pic5} alt={pic5} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic6} width={300} height={300} className='pic' />
+              <img src={pic6} alt={pic6} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic7} width={300} height={300} className='pic' />
+              <img src={pic7} alt={pic7} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic8} width={300} height={300} className='pic' />
+              <img src={pic8} alt={pic8}width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic9} width={300} height={300} className='pic' />
+              <img src={pic9} alt={pic9} width={300} height={300} className='pic' />
             </CarouselItem>
             <CarouselItem>
-              <img src={pic10} width={300} height={300} className='pic' />
+              <img src={pic10} alt={pic10}width={300} height={300} className='pic' />
             </CarouselItem>
 
           </Carousel>

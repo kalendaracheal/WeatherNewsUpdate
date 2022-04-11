@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import axios from 'axios'
 import { NewsItem } from '../Components/index'
-import { NewsItemLocal } from '../Components/index'
-import { Link } from 'react-router-dom';
-import news from "../assets/news.jpg";
 import Footer from '../Footer';
+import NavBar from '../Navbar';
 
 require('dotenv').config({ path: '../../.env' })
 
-const api = {
-    key: "47e46bd320544ccdb2858f735f0d0890",
-    base: "https://newsapi.org/v2/everything?"
-  }
-  
-  
 
 
 const NewsList = () => {
@@ -45,10 +37,11 @@ const [articles, setArticles] = useState([]);
 
     return (
         <div>
+          <NavBar/>
           <h1 className='heading'>Search News</h1>
                <div className='start'>
            
-               <img src={news} width={120} height={100} className='pic' />
+               {/* <img src={news} alt={news} width={120} height={100} className='pic' /> */}
         <div className="search-box">
                     <input 
                         type="text"
@@ -61,17 +54,17 @@ const [articles, setArticles] = useState([]);
                           
                 </div>
 
-
+{/* 
                 <Link to="/Newsdisplay"><div className='start-text'><button className='btn'>News Update</button> </div></Link>
 
-<Link to="/Weather"><div className='start-text'><button className='btn'>Weather Updates</button> </div></Link>
+<Link to="/Weather"><div className='start-text'><button className='btn'>Weather Updates</button> </div></Link> */}
         </div>
 
          
             
     <div className='displaynews'>
     
-               <div>
+               <div className='newsitem'>
               {articles.map(article => {
                   return(
 

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { NewsItemLocal } from '../Components/index'
+import NavBar  from '../Navbar';
+import Footer from '../Footer';
+
 
 const LocalNews = () => {
     
@@ -21,7 +24,7 @@ const [articles, setArticles] = useState([]);
           'x-api-key': 'NbPJlmXwr_fAd95OX8VgSAVzyodp1xoZMb2K0mijPMk'
         }
       }).then(function (response) {
-        console.log(response.data);
+        console.log(response.data.articles);
         setArticles(response.data.articles)
     }).catch(function (error) {
         console.error(error);
@@ -36,9 +39,13 @@ const [articles, setArticles] = useState([]);
  
 
   return (
-    <div>
+    <div >
+     <NavBar/>
      
-        {articles?.map(article => {
+     <h1 className='heading'>Local News</h1>
+     <div className='displaynews'>
+     <div className='newsitem'>
+     {articles?.map(article => {
                 return(
 
                     
@@ -53,6 +60,10 @@ const [articles, setArticles] = useState([]);
                     />
                 )
             })} 
+     </div>
+     
+     </div>
+     <Footer/>     
         
     </div>
   )

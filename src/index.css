@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  
   /* font-family:'Times New Roman'; */
   /* font-family: sans-serif; */
 }
@@ -32,20 +33,22 @@ main {
   color: white;
   margin: 0 0 75px;
   text-align: center;
-  padding-left: 10%;
+  padding-left: 18%;
+  padding-right: 10%;
   display: flex;
 }
 
+
 .search-box .search-bar {
   display:block;
-  width: 60%;
+  width: 80%;
 
   appearance: none;
   background: none;
   border: none;
   outline: none;
 
-  padding: .7rem 1.5rem;
+  padding: .8rem 2.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(114, 152, 170, 0.8);
@@ -123,9 +126,22 @@ main {
   padding-right: 30px;
  
 } 
+.newsitem{
+  display: flex;
+  gap: 20px;
+flex-wrap:wrap;
+padding-left: 80px;
+
+}
+.navstyle{
+justify-content: space-evenly;
+display: flex;
+}
 .btn{
- border: 2px solid rgb(173, 172, 172);
- font-size:large;  
+ border: 2px solid rgb(163, 187, 206);
+ font-size:large; 
+ background-color: rgb(248, 249, 250); 
+ justify-content: center;
 }
 .btn-w{
   border: 1px solid rgb(173, 172, 172);
@@ -158,9 +174,8 @@ main {
   
 }
 .displayw{
-  display: flex;
-  justify-content:space-evenly;
-  
+  justify-content: end;
+  color: whitesmoke;
 }
 .displaynews{
   display: flex;
@@ -168,7 +183,8 @@ main {
   
 }
 .heading{
-  padding-left: 30%;
+  padding-left: 40%;
   padding-top: 20px;
+  color: rgb(4, 34, 58);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -13,11 +13,11 @@ const Footer = () => {
       </span>
       <hr style={{ width: "90%" }} />
       <div className="iconContainer">
-      <img src={pic} width={50} height={50} className='pic' />
+      <img src={pic} alt={pic} width={50} height={50} className='pic' />
       <div>Principles of programming Languages </div> 
         {/* <a href="https://www.linkedin.com/in/piyush-eon" target="__blank"> */}
-          <div>Group 17</div>
-          <img src={news} width={50} height={50} className='pic' />
+          <div>Group 30</div>
+          <img src={news} alt={pic} width={50} height={50} className='pic' />
         
       <div></div>
        
