@@ -19,11 +19,11 @@ const NewsItem = ({ title, description, url, urlToImage,date , excerpt}) => {
             <Card.Body>
             <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                <h6>{excerpt}</h6>
+            {excerpt}
                 </Card.Text>
-                {/* <a href={url} variant="primary">Read more</a> */}
+                
                 <a href={url}><button className='btn'>Read more</button></a>
-                {/* <p>{date}</p> */}
+    
             </Card.Body>
             </Card>
                 

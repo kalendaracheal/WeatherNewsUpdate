@@ -14,8 +14,7 @@ const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     
-     // const response = await axios.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=47e46bd320544ccdb2858f735f0d0890')
-      
+   
       const response = axios.request( {
         method: 'GET',
         url: 'https://api.newscatcherapi.com/v2/search',

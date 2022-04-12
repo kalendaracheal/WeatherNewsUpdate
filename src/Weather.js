@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <div className={(typeof data.main != "undefined") ? ((data.main.temp > 19) ? 'app warm' : 'app') : 'app'}>
+    <div className={(typeof data.main != "undefined") ? ((data.main.temp > 24) ? 'app warm' : 'app') : 'app'}>
       <NavBar/>
       <main>
         <div className='start'>
@@ -70,8 +70,8 @@ function App() {
                         
         </div>
         <div >
-                    <div className='displayw'><h5>Time:{hours}:{minutes}</h5></div>
-                </div>  
+           <div className='displayw'><h5>Time:{hours}:{minutes}</h5></div>
+        </div>  
 
 
         

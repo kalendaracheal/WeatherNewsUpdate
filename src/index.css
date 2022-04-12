@@ -48,7 +48,7 @@ main {
   border: none;
   outline: none;
 
-  padding: .8rem 2.5rem;
+  padding: .7rem 2.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
   border: 1px solid rgba(114, 152, 170, 0.8);
@@ -114,7 +114,7 @@ main {
 }
 .start{
   display: flex;
-  padding: 30px;
+  padding: 10px;
 }
 
  .start-text{
@@ -136,6 +136,13 @@ padding-left: 80px;
 .navstyle{
 justify-content: space-evenly;
 display: flex;
+}
+.news-suggestion{
+  padding-left:20%;
+  padding-right: 20%;
+  padding-bottom: 2%;
+  color: grey;
+
 }
 .btn{
  border: 2px solid rgb(163, 187, 206);
